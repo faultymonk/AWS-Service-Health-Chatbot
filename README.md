@@ -2,14 +2,20 @@
 
 ## Usage
 
-There are two primary ways which the service health check slackbot works.
+There are three primary ways which the service health check slackbot works.
 
-1. Custom slash command:
+1. Scheduled via Cloudwatch Event
+
+2. Via the API Gateway URL:
+
+```sh
+curl -s https://$API_ID.execute-api.us-west-2.amazonaws.com/prod/aws_status
+```
+
+3. Custom slash command:
 ```
 /aws_status
 ```
-
-2. Scheduled via Cloudwatch Event
 
 ![Example](screenshot.png)
 

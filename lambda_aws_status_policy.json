@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sdb:GetAttributes",
+                "sdb:PutAttributes"
+            ],
+            "Resource": [
+                "arn:aws:sdb:us-west-2:*:domain/aws-status"
+            ]
+        }
+    ]
+}
